@@ -9,7 +9,7 @@
 		<div>
 			<ol>
 				<% var quizzes = array %>
-				<& var i = 0 %>
+				<% var i = 0 %>
 				<% for(i; i< quizzes.length; i++) { %>
 				<li>
 					Pregunta Numero <%=quizzes[i].id%>. <%=quizzes[i].question %> : <%= quizzes[i].anwser %>
