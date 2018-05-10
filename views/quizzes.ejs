@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lista de los Quizzes</title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+	</head>
+	<body>
+		<h1>Lista de los Quizzes</h1>
+		<div>
+			<ol>
+				<% var quizzes = array %>
+				<% for(var i=0; i< quizzes.length; i++) { %>
+				<p><%= quizzes[i].question + ': ' + quizzes[i].answer %></p>
+				<% } %>
+			</ol>
+		</div>
+	</body>
+</html>
