@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-//const options = { logging: false, operatorsAliases: false };////
+const options = { logging: false, operatorsAliases: false };
 const sequelize = new Sequelize("sqlite:quizzes.sqlite", { logging: false });
 
 sequelize.define('quiz', {
@@ -19,10 +19,10 @@ sequelize.sync()
     .then(count => {
         if (!count) {
             return sequelize.models.quiz.bulkCreate([
-                { question: "Capital de Italia", answer: "Roma" },
-                { question: "Capital de Francia", answer: "París" },
+                { question: "Capital de Portugal", answer: "Lisboa" },
                 { question: "Capital de España", answer: "Madrid" },
-                { question: "Capita del Portugal", answer: "Lisboa" },
+                { question: "Capital de Italia", answer: "Roma" },
+                { question: "Capita del Francia", answer: "París" },
             ]);
         }
     })

@@ -9,9 +9,11 @@
 		<div>
 			<ol>
 				<% var quizzes = array %>
-				<% for(var i=0; i< quizzes.length; i++) { %>
-				<p><%= quizzes[i].question + ': ' + quizzes[i].answer %></p>
-				<% } %>
+				<& var i = 0 %>
+				<% for(i; i< quizzes.length; i++) { %>
+				<li>
+					Pregunta <%=quizzes[i].id%>. <%=quizzes[i].question %> : <%= quizzes[i].anwser %>
+				</li>
 			</ol>
 		</div>
 	</body>
